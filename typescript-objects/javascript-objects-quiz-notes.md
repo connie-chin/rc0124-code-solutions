@@ -17,7 +17,7 @@ Answer the following questions in the provided markdown file before turning in t
 - What is the purpose of interfaces in TypeScript?
   lists the requirement we need for the object? the properties the interface needs are there are have the required type
   -what are two different ways to describe the shape of an object in typescript?
-
+  -interface or type
 - How do optional properties in a TypeScript interface differ from mandatory properties, and why are they useful?
   they use a ?, useful because they leave room for that info, but you dont need to use it
 
