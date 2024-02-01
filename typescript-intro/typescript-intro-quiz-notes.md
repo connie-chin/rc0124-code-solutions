@@ -9,7 +9,7 @@ Answer the following questions in the provided markdown file before turning in t
 - Who created TypeScript?
   Microsoft
 - How can you compile TypeScript to JavaScript?
-  tsc compiler = typescript compiler
+  tsc function = typescript compiler
 - What are some benefits of using TypeScript?
   can write bigger and easier to read javascript as your project grows in scale and complexity. helps catch bugs and errors faster by giving you a nice structured way to write code
 
