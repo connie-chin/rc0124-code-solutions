@@ -9,7 +9,7 @@ Answer the following questions in the provided markdown file before turning in t
 - What is a method?
   it's a function which is a property of an object.. its an object reference to a function.. instance vs static methods
 - How is a method different from any other function?
-  its an object reference to a function??
+  its an object reference to a function??.. can return output values
 - How do you remove the last element from an array?
   array.pop()
 - How do you round a number down to the nearest integer?
@@ -23,21 +23,21 @@ Answer the following questions in the provided markdown file before turning in t
 - How do you break a string up into an array?
   split()
 - Do string methods change the original string? How would you check if you weren't sure?
-  console.log
+  string methods dont change the original string, can check w console.log .. cant mutate primitive data, can mutate object data tho. string is primitive so it doesnt change
 - Roughly how many string methods are there according to the MDN Web docs?
   42
 - Is the return value of a function or method useful in every situation?
-  no?
+  no, sometimes u want function just to perform an operation. sometime you want to return things. sometimes u can push
 - Roughly how many array methods are there according to the MDN Web docs?
   43
 - How do you get a collection of an objects keys?
-  Object.keys(objectname)
+  Object.keys(objectname).. pass the object into it
 - How do you get a collection of an objects values?
   Object.values(objectname)
 - How do you get a collection of both an objects keys and values?
   Object.entries(objectname)
 - What three-letter acronym should you always include in your Google search about a JavaScript method or CSS property?
-  mdn
+  mdn, w3 schools
 
 ## Notes
 
