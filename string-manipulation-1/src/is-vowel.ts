@@ -1,4 +1,10 @@
 /* exported isVowel */
+
+// if a letter is a vowel
+// return true
+// if it is not
+// return false
+
 function isVowel(char: string): boolean {
   if (char === 'a' || char === 'A') {
     return true;
