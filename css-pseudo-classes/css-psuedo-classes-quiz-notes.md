@@ -5,8 +5,13 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is a pseudo-class?
+  a selector that selects elements that are in a specific state (like if they are the first element of their type, or are being hovered over by the mouse pointer). act like they are apart of a class in your document
+
+pseudo elements start w double colon (ex: ::first-line)
+start w colon, (ex: :hover)
 
 - What are CSS pseudo-classes useful for?
+  useful for making changes in css without writing a bunch of class attributes in html
 
 ## Notes
 
