@@ -10,12 +10,13 @@
     <style>
       /* your styles here 👇 */
       #card-deck {
-        display: flex;
-        min-height: 100vh;
-        align-items: center;
-        justify-content: center;
+        display: flex; /* GOOD FOR PUTTING ITEMS SQUARE IN MIDDLE*/
+        min-height: 100vh; /* breathing room to center the pic around secondary axis*/
+        align-items: center; /*marching orders to all children,   GOOD FOR PUTTING IMAGE IN SQUARE CENTER */
+        justify-content: center; /* GOOD FOR PUTTING IMAGE SQUARE IN MIDDLE*/
       }
       .card-wrapper {
+        /*this is the card container from direction. direct child */
         flex-basis: calc(100% / 3);
       }
     </style>
