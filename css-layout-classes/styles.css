@@ -1,6 +1,7 @@
 .container {
-  max-width: 800px;
-  margin: auto;
+  /* this is the parent to img? */
+  max-width: 800px; /* limits how wide the content can be */
+  margin: 0 auto;
 }
 
 .row {
@@ -8,7 +9,8 @@
 }
 
 img {
-  width: 100%;
+  /* or .character */
+  width: 100%; /* in relation to parent container, doesn't matter that it is 300px now */
 }
 
 .column-one-third {
