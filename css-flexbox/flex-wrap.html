@@ -10,14 +10,16 @@
     <style>
       /* your styles here 👇 */
       #card-deck {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex; /*children, line up*/
+        flex-wrap: wrap; /* parent saying you can have 100/6 aka two rows */
         /*border: 2px solid red;*/
         padding: 8px;
       }
 
       .card-wrapper {
-        flex-basis: calc(100% / 6);
+        flex-basis: calc(
+          100% / 6
+        ); /* ties into flex ecosystem, recommended. same as width*/
         /*border: 2px solid green;*/
         padding: 5px;
       }
