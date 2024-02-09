@@ -1,0 +1,8 @@
+div {
+  color: blue;
+}
+
+p {
+  /* at first, inherited blue til we set it to red. it didnt have a value at first so got value from parents */
+  color: red;
+}

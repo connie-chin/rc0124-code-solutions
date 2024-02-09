@@ -1,0 +1,20 @@
+#verou {
+  color: black !important;
+}
+
+#timbl {
+  color: red;
+}
+
+.bio {
+  color: green;
+}
+
+p {
+  /* doesnt change lea's bc specificity in html */
+  color: orange;
+}
+
+* {
+  color: blue;
+}
