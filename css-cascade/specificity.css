@@ -1,5 +1,5 @@
 #verou {
-  color: black !important;
+  color: black !important; /* the only thing that can change lea paragraph from purple, which is inline element */
 }
 
 #timbl {
