@@ -11,7 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
 - How does setting `position: relative` on an element affect where it appears on the page?
   it works the opposite way? if you say top, imagine its getting pushed on top, aka moving down. imagine what the property is , youre starting from there and moving it away?
 - How does setting `position: absolute` on an element affect document flow?
-  in relation to the parent? positioned absolutely relative to the parent. parent needs to have a postion property that isnt static. @9 min in video... does not exist in normal document flow, sits on its own layer separate from everything else
+  in relation to the parent? positioned absolutely relative to the parent. parent needs to have a postion property that isnt static. @9 min in video... does not exist in normal document flow, sits on its own layer separate from everything else... takes us out of document flow, elements leave their og position and look for a parent to be contained in. want anything not statically positioned, but if cant find, will go to body
 - How does setting `position: absolute` on an element affect where it appears on the page?
   specify the distance the element should be from each of the containing elements sides
 - How do you constrain an absolutely positioned element to a containing block?
