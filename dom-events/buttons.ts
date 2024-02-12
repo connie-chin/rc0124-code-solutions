@@ -4,7 +4,7 @@ if (!$click) throw new Error('The $click query failed');
 function handleClick(event: any): any {
   console.log('button clicked');
   console.log(event);
-  console.log(event.property);
+  console.log(event.target);
 }
 $click.addEventListener('click', handleClick);
 
@@ -14,7 +14,7 @@ if (!$hover) throw new Error('The $hover query failed');
 function handleMouseover(event: any): any {
   console.log('button hovered');
   console.log(event);
-  console.log(event.property);
+  console.log(event.target);
 }
 $hover.addEventListener('mouseover', handleMouseover);
 
