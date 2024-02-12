@@ -1,0 +1,20 @@
+#verou {
+  color: black !important; /* the only thing that can change lea paragraph from purple, which is inline element */
+}
+
+#timbl {
+  color: red;
+}
+
+.bio {
+  color: green;
+}
+
+p {
+  /* doesnt change lea's bc specificity in html */
+  color: orange;
+}
+
+* {
+  color: blue;
+}
