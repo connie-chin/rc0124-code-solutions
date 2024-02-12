@@ -1,0 +1,14 @@
+html {
+  font-size: 22px;
+}
+
+.page-title {
+  font-size: 3rem;
+
+  /* your code here */
+  position: fixed;
+  left: 0; /* earlier did left: 200px, it worked visually but wouldnt if the page grew */
+  right: 0; /* the container starts at the left and ends on the right */
+  text-align: center; /* this will make it go in the middle ... if u want to doo all at once can use
+  inset: 0; */
+}
