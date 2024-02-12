@@ -1,0 +1,26 @@
+.container {
+  /* this is the parent to img? */
+  max-width: 800px; /* limits how wide the content can be */
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+img {
+  /* or .character */
+  width: 100%; /* in relation to parent container, doesn't matter that it is 300px now */
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-two-thirds {
+  flex-basis: 66%;
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+}
