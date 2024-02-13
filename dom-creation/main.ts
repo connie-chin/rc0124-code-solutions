@@ -89,13 +89,13 @@ function renderPokemon(pokemon: Pokemon): HTMLDivElement {
 
   const $name = document.createElement('h2');
   $name.textContent = `${pokemon.name}`;
-  $pokemonCardText.appendChild($name);
+  $pokemonCardText.appendChild($name); // append them to what you want to nest them within
   const $number = document.createElement('h3');
-  $number.textContent = `${pokemon.number}`;
+  $number.textContent = `#${pokemon.number}`;
   $pokemonCardText.appendChild($number);
   const $description = document.createElement('p');
   $description.textContent = `${pokemon.description}`;
-  $pokemonCardText.appendChild($description);
+  $pokemonCardText.appendChild($description); // order we append matters in how it is displayed
 
   return $columnThird;
 }
