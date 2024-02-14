@@ -9,7 +9,7 @@ Answer the following questions in the provided markdown file before turning in t
 - Why is it possible to listen for events on one element that actually happen its descendent elements?
   bubbling, when an event happens on an element, it first runs the handlers on it, the its parents, all the way up to its ancestors. events bubble from their inner element all the way up to the surface/ancestors
 - What DOM element property tells you what type of element it is?
-  this(= event.currentTarget) wherever the handler runs on
+  .tagName
 - What does the `element.closest()` method take as its argument and what does it return?
   takes selectors in as argument, it returns a string of the closest element name
 - How can you remove an element from the DOM?
