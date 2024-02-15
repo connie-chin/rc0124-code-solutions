@@ -7,7 +7,7 @@ Answer the following questions in the provided markdown file before turning in t
 - What is a **breakpoint** in responsive Web design?
 the points where media query are introduced, like what can you adjust so the content doesn't change too much per screen size
 - What is the advantage of using a percentage (_e.g._ `50%`) width instead of a fixed (_e.g._ `px`) width for a "column" class in a responsive layout?
-doesn't matter how big your screen is, everything can be adjusted to it accordingly
+doesn't matter how big your screen is, everything can be adjusted to it accordingly. this is more flexible
 - If you introduce CSS rules for a smaller `min-width` _after_ the styles for a larger `min-width` in your style sheet, the CSS rules for the **smaller** `min-width` will "win". Why is that?
 source order
 ## Notes

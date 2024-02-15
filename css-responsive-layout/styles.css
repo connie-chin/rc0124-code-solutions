@@ -33,6 +33,7 @@ body {
 /* your code 👇 here */
 
 @media screen and (width >= 576px) {
+  /* if you dont specify screen, all is the default. aka print and screen */
   .col-sm-half {
     flex-basis: 50%;
   }
