@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="pokemon.css" />
     <style>
       #card-deck {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex; /* flex parent*/
+        flex-wrap: wrap; /* we respect the children's width for what they want to be*/
       }
 
       .card-wrapper {
@@ -20,6 +20,7 @@
       /* your code here 👇 */
 
       @media (min-width: 575px) {
+        /* can see this when u click on card-wrapper on console*/
         .card-wrapper {
           flex-basis: 50%;
         }
@@ -29,7 +30,7 @@
         .card-wrapper {
           flex-basis: calc(100% / 3);
         }
-      }
+      } /* remember source order when writing this, bottom of page gets more importance*/
     </style>
   </head>
   <body>
