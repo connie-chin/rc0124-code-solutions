@@ -11,7 +11,7 @@ body {
 section {
   max-width: 992px;
   margin: 2rem auto;
-  display: flex;
+  display: flex; /* this the container, so this is the parent set to flex */
   justify-content: space-evenly;
 }
 
@@ -23,7 +23,7 @@ section {
   color: white;
   background-color: blue;
   cursor: pointer;
-  transition: 0.5s;
+  transition: all 0.5s; /* if we put all in front of the time, the transition would apply to each pseudo property, vs we put transofrm there, this would only be applied to transform property in pseudo class */
 }
 
 .card-wrapper {
@@ -38,8 +38,11 @@ section {
   border-radius: 0.25rem;
   background-color: white;
   cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.5s;
+  transform: scale(
+    1
+  ); /* scale by default is a value of 1, if we took this off, it would be same */
+  transition: transform 0.5s; /* if we made it 1.5s, it would take longer
+  also here, if we moved it to the pseudo class :hover, the time would be snatched once the mouse wasn't on it */
 }
 
 .card > img {
