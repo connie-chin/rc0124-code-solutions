@@ -10,7 +10,7 @@ Answer the following questions in the provided markdown file before turning in t
   serialization is process of converting an object into a stream of bytes so it can be transferred over a network or stored in persistent storage. pic of pupp to data
   deserialization is opposite, getting the stream of bytes from a network or persistant storage and converting it back to the object w the same state. data to pic of pupp
 - Why are serialization and deserialization useful?
-  so you can access data without it getting messed up along the way?
+  so you can access and send the data
 - How do you serialize a data structure into a JSON string using JavaScript?
   JSON.stringify()
 - How do you deserialize a JSON string into a data structure using JavaScript?

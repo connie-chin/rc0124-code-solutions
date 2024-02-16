@@ -16,13 +16,14 @@ const books = [
   },
 ];
 
-console.log('array of books:', books);
+console.log('array of books:', books, 'type of books:', typeof books);
 console.log('array stringified:', JSON.stringify(books));
 console.log('type of:', typeof JSON.stringify(books));
 
-const studentInfo = '{"Number id": "6021","name": "Macy lane"}';
-console.log('studentInfo:', studentInfo);
-console.log('type of: ', typeof studentInfo);
-const obj = JSON.parse(studentInfo);
-console.log('new obj:', obj);
-console.log('type of:', typeof obj);
+const studentJSON = '{"Number id": "6021","name": "Macy lane"}'; // outside needs to be single quote, inside must be double quote
+console.log('studentJSON:', studentJSON);
+console.log('type of: ', typeof studentJSON);
+
+const studentObj = JSON.parse(studentJSON); // takes JSON data and turns it back into javascript object, so you can do more than what you could do with a string
+console.log('new obj:', studentObj);
+console.log('type of:', typeof studentObj);
