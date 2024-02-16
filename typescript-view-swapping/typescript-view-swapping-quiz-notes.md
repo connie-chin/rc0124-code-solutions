@@ -15,7 +15,7 @@ Answer the following questions in the provided markdown file before turning in t
 - At what steps of the solution would it be helpful to log things to the console?
   every step
 - If you were to add another tab and view to your HTML, but you didn't use event delegation, how would your JavaScript code be written instead?
-  we would need to add a separate event listener to it
+  we would need to add a separate event listener to it.. would need to query dom for the new element
 - If you didn't use a loop to conditionally show or hide the views in the page, how would your JavaScript code be written instead?
   you would have to check every view element and perform the actions of comparing it to the current view and changing each class name. it would just be alot of coding and not efficient
 
