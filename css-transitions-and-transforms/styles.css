@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: rgb(245, 245, 245);
+}
+
+section {
+  max-width: 992px;
+  margin: 2rem auto;
+  display: flex; /* this the container, so this is the parent set to flex */
+  justify-content: space-evenly;
+}
+
+.custom-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+  transition: all 0.5s; /* if we put all in front of the time, the transition would apply to each pseudo property, vs we put transofrm there, this would only be applied to transform property in pseudo class */
+}
+
+.card-wrapper {
+  text-align: center;
+}
+
+.card {
+  max-width: 18rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 0.25rem;
+  background-color: white;
+  cursor: pointer;
+  transform: scale(
+    1
+  ); /* scale by default is a value of 1, if we took this off, it would be same */
+  transition: transform 0.5s; /* if we made it 1.5s, it would take longer
+  also here, if we moved it to the pseudo class :hover, the time would be snatched once the mouse wasn't on it */
+}
+
+.card > img {
+  width: 100%;
+}
+
+.custom-button:hover {
+  background-color: red;
+  transform: rotate(3deg);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
