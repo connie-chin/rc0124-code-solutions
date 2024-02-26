@@ -2,7 +2,7 @@ const intervalID = setInterval(myCallback, 1000);
 
 setInterval(myCallback, 1000);
 let count = 4;
-function myCallback(): any {
+function myCallback(): void {
   const $countdownDisplay = document.querySelector('.countdown-display');
   if (!$countdownDisplay)
     throw new Error('This $countdownDisplay query failed');
@@ -11,6 +11,6 @@ function myCallback(): any {
     count--;
   } else {
     $countdownDisplay.textContent = '~Earth Beeeelooowww Us~';
+    clearInterval(intervalID);
   }
-  clearInterval(intervalID);
 }
