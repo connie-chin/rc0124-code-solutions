@@ -15,7 +15,7 @@ Answer the following questions in the provided markdown file before turning in t
   returns right hand side operand if left side operand is null or undefined. diff than || because it only cares about null or undefined, vs anything falsy like ||
 - What is the `?:` (ternary) operator? How does it differ from `if/else`?
   alternative to an if else statement, takes in 3 operands.
-  condition ? expression to be evaluated if condition is truthy : expression to be evaluated if condition is falsy
+  condition ? expression to be evaluated if condition is truthy : expression to be evaluated if condition is falsy. this is concise and has a return value. doesn't execute multiple lines of code
 - What is the `?.` (optional chaining) operator? When would you use it?
   accesses an objects property or calls a function, if those are undefined/null, expression short circuits and evaluates to undefined instead of throwing an error, like the dot operator but returns undefined if it can't be found versus an error
 - What is `...` (spread) syntax? How do you use it with arrays and objects?
