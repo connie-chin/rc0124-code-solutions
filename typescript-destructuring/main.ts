@@ -47,11 +47,11 @@ const library: Book[] = [
   },
 ];
 
-const [book3, book4, book5] = library;
+const [book3, book4, book5] = library; // destructuring based on position. first book is called book3, second is book4, third is book5
 
 console.log('book3:', book3);
 console.log('book4:', book4);
 console.log('book5:', book5);
 
-const [, , , book6] = library;
+const [, , , book6] = library; // fourth element needs a variable name, aka book6
 console.log('book6:', book6);
