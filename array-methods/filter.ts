@@ -15,5 +15,5 @@ const names = [
 const evenNumbers = numbers.filter((num) => num % 2 === 0);
 console.log('Even Numbers:', evenNumbers);
 
-const noD = names.filter((name) => !name.includes('d') && !name.includes('D'));
+const noD = names.filter((name) => !name.includes('d') && !name.includes('D')); //! name.toLowerCase().includes
 console.log('No D:', noD);

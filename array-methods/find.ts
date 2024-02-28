@@ -22,7 +22,7 @@ const products: Product[] = [
 ];
 
 const user = users.find(({ id }) => id === 2);
-console.log('user:', user);
+console.log('user:', user); // .find finds the first element in the array w the criteria n returns that
 
 const expensiveProduct = products.find(({ price }) => price > 900);
 console.log('expensiveProduct:', expensiveProduct);
