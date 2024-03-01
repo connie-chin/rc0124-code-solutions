@@ -9,9 +9,10 @@ Answer the following questions in the provided markdown file before turning in t
 - What is the default request method used by `fetch()`?
   'GET'
 - How do you specify the request method (`GET`, `POST`, etc.) when calling `fetch`?
-  method: 'POST'
+  {method: 'POST'}
 - How does `fetch` report errors?
   with a TypeError message, it only rejects when a network error is encountered(which is usually when there's a permissions issue or similar)
+  with try catch method
 
 ## Notes
 
