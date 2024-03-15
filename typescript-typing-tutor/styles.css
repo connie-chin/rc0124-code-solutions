@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  margin: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct {
+  color: rgb(38, 247, 84);
+}
+
+.current {
+  text-decoration: underline black;
+  color: black;
+}
+
+.current.incorrect {
+  color: red;
+  text-decoration: underline red;
+}
