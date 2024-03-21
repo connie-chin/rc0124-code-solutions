@@ -1,0 +1,49 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.first {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.second {
+  background-color: rgb(53, 28, 117);
+  color: white;
+}
+
+.third {
+  background-color: rgb(103, 78, 167);
+  color: white;
+}
+
+.fourth {
+  background-color: rgb(224, 102, 102);
+  color: black;
+}
+
+.fifth {
+  background-color: rgb(246, 178, 107);
+  color: black;
+}
+
+.sixth {
+  background-color: rgb(255, 254, 1);
+  color: black;
+}
+
+.seventh {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
