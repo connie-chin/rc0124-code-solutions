@@ -21,23 +21,24 @@ body {
 
 #wrapper {
   border-radius: 99px;
+  display: flex;
+  width: 50px;
+  height: 25px;
+  background-color: orange;
 }
 
 #wrapper.isOff {
   background-color: grey;
+  justify-content: start;
+}
+
+#wrapper.isOn {
+  background-color: green;
+  justify-content: end;
 }
 
 #slider {
   background-color: white;
   width: 50%;
-  border-radius: 100px;
-}
-
-#slider.isOn {
-  display: flex;
-  justify-content: end;
-}
-
-#wrapper.isOn {
-  background-color: green;
+  border-radius: 50%;
 }

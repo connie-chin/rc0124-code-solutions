@@ -13,15 +13,14 @@ export function ToggleSwitch() {
   const toggleState = forToggleState();
 
   return (
-    <div id="wrapper" className={toggleState}>
-      <div
-        id="slider"
-        className={toggleState}
-        onClick={() => setToggle(!toggle)}>
-        <div id="switch">
-          <span>ON/OFF</span>
-        </div>
+    <div>
+      <div id="wrapper" className={toggleState}>
+        <div
+          id="slider"
+          className={toggleState}
+          onClick={() => setToggle(!toggle)}></div>
       </div>
+      <p>{toggle ? 'ON' : 'OFF'}</p>
     </div>
   );
 }
