@@ -14,10 +14,9 @@ Answer the following questions in the provided markdown file before turning in t
 - Which style do you prefer?
   uncontrolled feels simpler
 - What two props must you pass to an input for it to be "controlled"?
-  checked- a boolean. for checkbox input or a radio button, controls whether its selected
-  value- a string. for a text input, controls its texts
+  the current value of the component and an update callback to the component as props
 
-the current value of the component and an update callback to the component as props
+value and onClick here
 
 - What are some popular npm packages for creating forms in React?
   react hook form, formik, react final form

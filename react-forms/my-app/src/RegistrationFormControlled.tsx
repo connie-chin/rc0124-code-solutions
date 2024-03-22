@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FormEvent } from 'react';
 
 export function RegistrationFormControlled() {
   const [username, setUsername] = useState('');
@@ -6,9 +7,7 @@ export function RegistrationFormControlled() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // const form = event.target;
-    // const formData = new FormData(form);
-    console.log({ username }, ',', { password });
+    console.log({ username, password });
   }
 
   return (
