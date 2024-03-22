@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: oldlace;
+  min-height: 100vh; /* this makes the height of this, the whole page, instead of just the hieght of the content in the container */
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  background-color: rgb(252, 234, 134);
+  box-shadow: 0 4px 30px rgb(254, 240, 137); /* gives a blurry effect on the edges */
+}
+
+.circle.gray {
+  background-color: rgb(34, 34, 35);
+  border: 2px solid rgb(34, 34, 35);
+  box-shadow: none;
+}
+
+.container.black {
+  background-color: black;
+}
