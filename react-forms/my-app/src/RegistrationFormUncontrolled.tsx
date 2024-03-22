@@ -5,9 +5,9 @@ export function RegistrationFormUncontrolled() {
     event.preventDefault();
 
     const form = event.target;
-    const formData = new FormData(form);
+    const formData = new FormData(form); //passing the entire form into FormData
 
-    const formJson = Object.fromEntries(formData.entries());
+    const formJson = Object.fromEntries(formData.entries()); //is this destructuring of the object? go back n console log these
     console.log(formJson);
   }
   return (

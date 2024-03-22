@@ -17,7 +17,7 @@ export function RegistrationFormControlled() {
           Username
           <input
             value={username}
-            onChange={(event) => setUsername(event.target.value)}
+            onChange={(event) => setUsername(event.target.value)} //listening for any change, it called this call back function and passes it the target value, state updates everytime we make a change
             name="username"
           />
         </label>
