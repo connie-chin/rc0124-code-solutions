@@ -1,0 +1,16 @@
+input {
+  margin-top: 10px;
+}
+
+p,
+.x {
+  color: red;
+}
+
+.check {
+  color: green;
+}
+
+i {
+  margin-left: 10px;
+}
