@@ -1,13 +1,12 @@
-// import { StopWatch } from './StopWatchContainer'
-// import './App.css'
+import { StopWatch } from './StopWatchContainer';
+import './App.css';
 
-// function App() {
+function App() {
+  return (
+    <>
+      <StopWatch />
+    </>
+  );
+}
 
-//   return (
-//     <>
-//       <StopWatch/>
-//     </>
-//   )
-// }
-
-// export default App
+export default App;
