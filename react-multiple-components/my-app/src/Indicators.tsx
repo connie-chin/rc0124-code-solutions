@@ -1,6 +1,6 @@
 type Props = {
   items: string[];
-  onIndicatorClick: () => void;
+  onIndicatorClick: (index: number) => void;
   currentIndex: number;
 };
 //highlight which its on

@@ -16,6 +16,12 @@ export function RotatingBanner({ items }: Props) {
 
   function handlePrevClick() {
     console.log('wuz clicked');
+    setCurrentIndex((currentIndex - 1 + items.length) % items.length);
+  }
+
+  function handleNextClick() {
+    console.log('next clicked');
+    setCurrentIndex((currentIndex + 1) % items.length);
   }
 
   return (
@@ -32,7 +38,7 @@ export function RotatingBanner({ items }: Props) {
         />
       </div>
       <div>
-        <NextButton />
+        <NextButton onNextClick={handleNextClick} />
       </div>
     </>
   );
