@@ -23,3 +23,7 @@ body {
 button {
   border: 2px solid grey;
 }
+
+.highlight {
+  background-color: lightblue;
+}
