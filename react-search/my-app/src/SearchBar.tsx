@@ -1,16 +1,17 @@
-import { useState } from 'react';
+type Props = {
+  value: string;
+  onSearchBarChange: () => void;
+};
 
-export function SearchBar() {
-  const [userInput, setUserInput] = useState('');
-
+export function SearchBar({ value, onSearchBarChange }: Props) {
   return (
     <>
       <input
         type="text"
-        value={userInput}
-        onChange={(event) => setUserInput(event.target.value)}
         name="userInput"
         placeholder="search"
+        value={value}
+        onChange={onSearchBarChange}
       />
     </>
   );

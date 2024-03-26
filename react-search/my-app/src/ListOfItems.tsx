@@ -4,7 +4,7 @@ type Props = {
 
 export function ListOfItems({ quotes }: Props) {
   const listedItems = quotes.map((singleQuote, index) => (
-    <li key={index}>{singleQuote}</li>
+    <li key={singleQuote + index}>{singleQuote}</li>
   ));
   return <ul>{listedItems}</ul>;
 }
