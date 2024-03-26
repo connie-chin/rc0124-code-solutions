@@ -13,7 +13,7 @@ export function SearchableList({ quotes }: Props) {
   );
   function forQuoteDisplay() {
     if (filteredQuotes.length === 0) {
-      return ['No items match'];
+      return ['No items match the filter.'];
     } else {
       return filteredQuotes;
     }
