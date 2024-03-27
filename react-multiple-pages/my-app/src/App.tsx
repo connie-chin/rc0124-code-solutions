@@ -29,7 +29,8 @@ export function App() {
           <Route index element={<Dashboard />} />
           <Route path="details/:itemId" element={<Details />} />
           <Route path="about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />{' '}
+          {/* this is like a catch all route, if its anything but those about, it will return this page for us... a 404 page we set up*/}
         </Route>
       </Routes>
     </>

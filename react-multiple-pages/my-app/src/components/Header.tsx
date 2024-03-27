@@ -24,7 +24,7 @@ export function Header() {
           </ul>
         </div>
       </nav>
-      {/* Page content goes here */}
+      {/* outlet is pointing to those 4 routes- dashboard, details, about, notfound */}
       <Outlet />
     </div>
   );

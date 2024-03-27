@@ -12,6 +12,7 @@ export function Dashboard() {
   const [error, setError] = useState<unknown>();
 
   useEffect(() => {
+    //awaiting readItems, we want to show error or data that came back
     async function loadItems() {
       try {
         const values = await readItems();
@@ -24,7 +25,7 @@ export function Dashboard() {
     }
     loadItems();
   }, []);
-
+  //handing the loading while we are waiting for data, also the error if data doesnt load properly
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -58,7 +59,7 @@ type CardProps = {
 function ItemCard({ item }: CardProps) {
   return (
     <Link
-      to={`/details/${item.itemId}`}
+      to={`/details/${item.itemId}`} //need to use {} bc its a template literal
       className="item card-body text-dark card mb-4 shadow-sm text-decoration-none">
       <h5 className="card-title">{item.name}</h5>
     </Link>

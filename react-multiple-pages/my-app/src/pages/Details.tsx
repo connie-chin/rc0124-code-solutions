@@ -10,11 +10,11 @@ import { useNavigate } from 'react-router-dom';
 //   onDone: () => void;
 // };
 export function Details() {
-  const { itemId } = useParams();
+  const { itemId } = useParams(); //lets us access variables stored in url. this variable needs to match the path value from App.tsx
   const [item, setItem] = useState<Item>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //call it, pass it a path and it will go there. programmatically redirects
 
   useEffect(() => {
     async function loadItem(itemId: number) {
@@ -45,7 +45,7 @@ export function Details() {
   const { name, image, description } = item;
 
   function handleClick() {
-    alert(`Saved ${name}`);
+    alert(`Saved ${name}`); // item?.name
     navigate('/');
   }
   return (
