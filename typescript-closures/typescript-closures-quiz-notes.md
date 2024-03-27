@@ -5,17 +5,17 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - In JavaScript, when is scope determined?
-  when a function or variable is declared
+  at parse time
 - What allows JavaScript functions to "remember" variables from their surroundings?
   closures
 - What values does a closure contain?
-  all the variables that were in the scope when the function was declared
+  keeps track of itself, and the references that it contains that arent local to that function
 - When is a closure created?
-  everytime a function is created?
+  when a function definition is created
 - How can you tell if a function will be created with a closure?
-  every function has a closure, its more useful if not in global scope tho?
+  if the body of the function is referencing anything outside of its local scope
 - In React, what is one important case where you need to know if a closure was created?
-  useEffect
+  useEffect dependencies
 
 ## Notes
 
