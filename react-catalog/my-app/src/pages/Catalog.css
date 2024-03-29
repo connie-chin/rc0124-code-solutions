@@ -1,0 +1,30 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card-container {
+  border: 2px solid grey;
+  width: calc(100% / 3.3);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 4px;
+}
+
+img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.catalog-price {
+  color: grey;
+}
