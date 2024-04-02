@@ -1,0 +1,21 @@
+.topic-card {
+  background-color: rgb(221, 221, 221);
+  padding: 5px;
+  border: 2px solid black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content {
+  background-color: white;
+  border: 2px solid black;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+.cards-container {
+  width: 50%;
+  font-family: sans-serif;
+  cursor: pointer;
+}
