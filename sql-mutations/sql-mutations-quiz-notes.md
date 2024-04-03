@@ -27,7 +27,9 @@ Answer the following questions in the provided markdown file before turning in t
 - How do you get back the modified row without a separate `select` statement?
   returning \*;
 - Why did you get an error when trying to delete certain films?
-  bc it violates foreign key constraint "film_actor_film_id_fkey" on table "castMembers"... the films we are trying to delete are interrelated to the castMembers table
+  bc it violates foreign key constraint "film_actor_film_id_fkey" on table "castMembers"... the films we are trying to delete are interrelated to the castMembers table. cast members keeps it as a firegin key and we specifically told it not to delete it
+
+  cast members is dependent on actorid from actor's table
 
 ## Notes
 
