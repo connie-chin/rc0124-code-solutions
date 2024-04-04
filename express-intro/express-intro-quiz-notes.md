@@ -5,15 +5,19 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is Express useful for?
-  as a web server framework for Node.js, has lots of features for web and mobile applications
+  we can build servers very rapidly
 - How does Express fit into a full-stack web application?
-  its a web server framework for Node.js
+  it provides us the server of the 3 step architecture
 - How do you add `express` to your package dependencies?
   npm install express
 - What Express application method starts the server and binds it to a network `port`?
   listen()
 - What is a network `port`?
   a virtual point where network connections start and end. each port is associated with a specific process or service. they let computers differentiate between diff kinds of traffic ex: email, webpage
+
+  virtual interface that u can have applications listen to. its a point of entry... its like a phone number/address
+
+  entry point into the computer
 
 ## Notes
 
