@@ -10,61 +10,66 @@ const app = express();
 
 app.get('/api/notes', async (req, res, next) => {
   try {
-    const notes = await readNotes();
-    res.send(notes);
+    // use try catch as client
+    const notes = await readNotes(); // simulates functionality of an api call, so need try/catch w await.. need async up there.. readNotes() would be like our api
+    res.send(notes); // either sending the data back to the client
   } catch (err) {
-    console.error(err);
-    next(err);
+    // or an error back to the client
+    next(err); // goes to errorMiddleware.. its checking if clienterror object, it's not- so it will go to the else which sends 500
   }
 });
 
 app.post('/api/notes', async (req, res, next) => {
   try {
-    const { content } = req.query;
+    const { content } = req.query; // destructing content property from query property from req object and storying it into content
     if (content === undefined) {
+      // need content to add to the note
       throw new ClientError(400, 'content is required');
     }
     const note = {
+      // posting a new note
       id: Math.floor(100 * Math.random()),
-      content: String(content),
+      content: String(content), // making sure content is a string
     };
-    await writeNote(note);
+    await writeNote(note); // if something crashes while we are trying to write it, it will go to catch which will be a 500 error bc not on the client.. when its our fault, we send the 500 back
     res.send(note);
   } catch (err) {
-    console.error(err);
     next(err);
   }
 });
 
 app.put('/api/notes', async (req, res, next) => {
   try {
-    const { id, content } = req.query;
+    const { id, content } = req.query; // anything we pass as a query param. we access id and content
     if (id === undefined) {
-      throw new ClientError(400, 'id is required');
+      // confirm id is not empty
+      throw new ClientError(400, 'id is required'); // u need an id
     }
     if (content === undefined) {
-      throw new ClientError(400, 'content is required');
+      // is there content
+      throw new ClientError(400, 'content is required'); // if not, throw an error
     }
     const note = {
-      id: +id,
-      content: String(content),
+      // updating a note. we need the id of the note, and the content we will use to update the note
+      id: +id, // convert the string value to make sure its a number... same as number(id)
+      content: String(content), // converting content to string
     };
     await writeNote(note);
-    res.send(note);
+    res.send(note); // client gets note if all went well
   } catch (err) {
-    console.error(err);
+    console.error(err); // if there was something wrong, client would get message
     next(err);
   }
 });
 
 app.delete('/api/notes', async (req, res, next) => {
   try {
-    const { id } = req.query;
+    const { id } = req.query; // require an id
     if (id === undefined) {
-      throw new ClientError(400, 'content is required');
+      throw new ClientError(400, 'content is required'); // if not, tell client they need an id
     }
     await deleteNote(+id);
-    res.send(`deleted ${id}`);
+    res.send(`deleted ${id}`); // saying we deleted it
   } catch (err) {
     console.error(err);
     next(err);
@@ -88,7 +93,7 @@ async function readNotes(): Promise<Note[]> {
             { id: 12, content: 'Express is easy!' },
             { id: 3, content: 'Simplicity itself' },
           ])
-        : reject(new Error('What bad luck! Read error.'));
+        : reject(new Error('What bad luck! Read error.')); // this gets sent to server.. when this happens the server crashes
     }, 10);
   });
 }
