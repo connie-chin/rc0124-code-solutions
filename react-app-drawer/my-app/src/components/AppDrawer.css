@@ -1,0 +1,26 @@
+.container-app-drawer {
+  background-color: aqua;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.navbar-app-drawer {
+  border: 2px solid red;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rest-of-content-app-drawer {
+  border: 2px solid purple;
+}
+
+img {
+  width: 20px;
+}
+
+.bars {
+  width: 30px;
+  height: 30px;
+}
