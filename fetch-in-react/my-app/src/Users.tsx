@@ -19,24 +19,24 @@ export function Users() {
   const [user, setUser] = useState<User>();
 
   useEffect(() => {
-    async function work() {
+    async function fetchUsers() {
       try {
-        const userItems = await fetch(
+        const response = await fetch(
           'https://jsonplaceholder.typicode.com/users'
-        );
-        if (!userItems.ok) {
-          throw new Error('Network response was not OK.');
+        ); //request to this userdata from this url
+        if (!response.ok) {
+          throw new Error(`fetch error ${response.status}`);
         }
-        const userJson = await userItems.json();
-        console.log('userJson', userJson);
-        setUsers(userJson);
+        const users = await response.json(); //this users is just for this function,
+        console.log('users', users); //diff than users from state variable, but we are using this value to set state value?
+        setUsers(users); //returning that data to state
       } catch (error) {
         setError(error);
       }
       setIsLoading(false);
     }
-    work();
-  }, []);
+    fetchUsers();
+  }, []); //only runs once when component loads
 
   if (isLoading) {
     return <p>Loading...</p>;
