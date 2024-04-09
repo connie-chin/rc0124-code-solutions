@@ -3,7 +3,6 @@ import { About } from './pages/About';
 import { Catalog } from './pages/Catalog';
 import { NotFound } from './pages/NotFound';
 import { ProductDetails } from './pages/ProductDetails';
-// import { Header } from './components/Header';
 import { AppDrawer } from './components/AppDrawer';
 
 const menuItems = [

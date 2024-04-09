@@ -1,26 +1,37 @@
 .container-app-drawer {
-  background-color: aqua;
-
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
 }
 
 .navbar-app-drawer {
-  border: 2px solid red;
-  width: 50px;
-  display: flex;
-  flex-direction: column;
+  /* border: 2px solid red; */
+  min-height: 100vh;
+  width: 4rem;
 }
 
-.rest-of-content-app-drawer {
-  border: 2px solid purple;
-}
-
-img {
-  width: 20px;
+.nav-bar-icon {
+  width: 1.5rem;
 }
 
 .bars {
   width: 30px;
   height: 30px;
+}
+
+p {
+  text-decoration: none;
+  color: black;
+}
+
+.is-open {
+  width: 15rem;
+}
+
+a {
+  display: flex;
+}
+
+.is-open-icon {
+  width: 1.5rem;
+  height: 1rem;
+  margin-top: 0.3rem;
 }
