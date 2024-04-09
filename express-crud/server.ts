@@ -15,19 +15,19 @@ const app = express();
 
 app.use(express.json());
 
-// type Grade = {
-//   gradeId?: number;
-//   name: string;
-//   course: string;
-//   score: number; // A number between 0 and 100
-// };
+type Grade = {
+  gradeId?: number;
+  name: string;
+  course: string;
+  score: number; // A number between 0 and 100
+};
 
 app.get('/api/grades', async (req, res, next) => {
   try {
     const sql = `
     select *
     from "grades";`;
-    const result = await db.query(sql);
+    const result = await db.query<Grade>(sql);
     const grades = result.rows;
     res.status(200).json(grades);
     if (!grades) throw new ClientError(500, 'This grade query failed');
@@ -48,7 +48,7 @@ app.get('/api/grades/:gradeId', async (req, res, next) => {
       from "grades"
       where "gradeId" = $1;`;
     const params = [gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     const grade = result.rows[0];
     if (!grade) throw new ClientError(404, `grade ${gradeId} not found`);
     res.status(200).json(grade);
@@ -76,7 +76,7 @@ app.post('/api/grades', async (req, res, next) => {
                 returning *;
     `;
     const params = [name as string, course as string, score as number];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     const insertedGrade = result.rows[0];
     res.status(201).json(insertedGrade);
   } catch (err) {
@@ -109,7 +109,7 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     where "gradeId" = $4
     returning *;`;
     const params = [name as string, course as string, score as number, gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     const updatedGrade = result.rows[0];
     if (!updatedGrade) throw new ClientError(404, `grade ${gradeId} not found`);
     res.status(200).json(updatedGrade);
@@ -129,7 +129,7 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
           where "gradeId"=$1
           returning *;`;
     const params = [gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     const deletedGrade = result.rows[0];
     if (!deletedGrade) throw new ClientError(404, `actor ${gradeId} not found`);
     res.sendStatus(204);
