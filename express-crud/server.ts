@@ -30,7 +30,6 @@ app.get('/api/grades', async (req, res, next) => {
     const result = await db.query<Grade>(sql);
     const grades = result.rows;
     res.status(200).json(grades);
-    if (!grades) throw new ClientError(500, 'This grade query failed');
   } catch (err) {
     // the 500
     next(err);
