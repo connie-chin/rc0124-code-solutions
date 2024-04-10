@@ -22,31 +22,31 @@ export function Todos() {
   useEffect(() => {
     async function fetchTodos() {
       try {
-        const response = await fetch('/api/todos');
+        const response = await fetch('/api/todos'); //response comes from server, after hitting correct endpoint
         if (!response.ok) {
           throw new Error(`fetch error ${response.status}`);
         }
-        const todos = await response.json();
-        setTodos(todos);
+        const todos = await response.json(); //json converted back into array of todos
+        setTodos(todos); //bc we are updating state, we are scheduling a re-render and the items get displayed on the page
       } catch (error) {
         setError(error);
       } finally {
-        setIsLoading(false);
+        setIsLoading(false); //dont want loading message anymore
       }
     }
     fetchTodos();
-  }, []);
+  }, []); //only happens once when the component loads
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo) {
+    //taking in a newTodo, we send it to the server
+    const req = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newTodo),
+    };
     try {
-      const response = await fetch('/api/todos', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newTodo),
-      });
+      const response = await fetch('/api/todos', req);
       if (!response.ok) {
         throw new Error(`fetch error ${response.status}`);
       }
@@ -59,24 +59,23 @@ export function Todos() {
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
   async function toggleCompleted(todo: Todo) {
+    const req = {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(todo),
+    };
     try {
-      todo.isCompleted = !todo.isCompleted;
-      const response = await fetch(`/api/todos/${todo.todoId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(todo),
-      });
+      todo.isCompleted = !todo.isCompleted; //whatever it currently is, we just want to switch it
+      const response = await fetch(`/api/todos/${todo.todoId}`, req);
       if (!response.ok) {
         throw new Error(`fetch error ${response.status}`);
       }
       const updatedTodo = await response.json();
-      const updatedArray = todos.map((todo) => {
-        if (todo.todoId === updatedTodo.todoId) {
+      const updatedArray = todos.map((original) => {
+        if (original.todoId === updatedTodo.todoId) {
           return updatedTodo;
         } else {
-          return todo;
+          return original;
         }
       });
       setTodos(updatedArray);
